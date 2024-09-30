@@ -323,6 +323,12 @@ body._lock {
   }
 }
 
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
   position: relative;
   background: var(--green) url("../img/main/bg.webp") 0 0/cover no-repeat;
@@ -366,8 +372,12 @@ body._lock {
 }
 
 .partners {
+  flex: 1 1 auto;
   background: var(--black);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .partners::before {
@@ -728,6 +738,14 @@ body._lock {
 
   .main__date {
     font-size: calc(1.75rem + 26 * (100vw - 20rem) / 1600);
+  }
+
+  .partners::before {
+    left: calc(-228px + 228 * (100vw - 1200px) / 720);
+  }
+
+  .partners::after {
+    right: calc(-197px + 197 * (100vw - 1200px) / 720);
   }
 
   .media__body {
